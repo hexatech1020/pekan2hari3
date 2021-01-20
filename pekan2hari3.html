@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Pekan-2 Hari ke-3</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		var daftarBuah = ["2. Apel", "5. Jeruk", "3. Anggur", "4. Semangka", "1. Mangga"];
+		var daftarBuahSorted = daftarBuah.sort();
+		document.write(`<b>Soal 1</b><br>`)
+		daftarBuahSorted.forEach((data) => {
+			document.write(`${data}<br>`);
+		});
+		document.write(`<br>`)
+
+
+		document.write(`<b>Soal 2</b><br>`)
+		var kalimat="saya sangat senang belajar javascript";
+		kalimatArray = kalimat.split(' ');
+		document.write(JSON.stringify(kalimatArray));
+		document.write(`<br><br>`)
+
+
+		document.write(`<b>Soal 3</b><br>`)
+		function Buah(nama, warna, biji, harga){
+			this.nama = nama;
+			this.warna = warna; 
+			this.ada_bijinya = biji;
+			this.harga = harga;
+
+			this.showName = function(){
+				document.write(`${this.nama}`)
+			}
+		}
+
+		var buah1 = new Buah("strawberry","merah","tidak","9000 ");
+		var buah2 = new Buah("jeruk","oranye","ada","8000 ");
+		var buah3 = new Buah("Semangka","Hijau & Merah","ada","10000 ");
+		var buah4 = new Buah("Pisang","Kuning","tidak","5000 ");
+
+
+		var arrayBuah = [buah1, buah2, buah3, buah4]; // ini adalah array of object
+
+		document.write(JSON.stringify(arrayBuah[0])); // dsiplay data pertama
+
+	</script>
+
+</body>
+</html>
